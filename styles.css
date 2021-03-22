@@ -130,6 +130,116 @@ color:#1a1a1a;
  color: #c2c2c2;
 }
 
+#click-me {
+  .animate();
+  .border-radius ( 50% );
+  .box-shadow(0 0 15px 0 rgba(0,0,0,.3));
+  position: fixed;
+  right: 50px;
+  bottom: 40px;
+  height: 55px;
+  width: 55px;
+  line-height: 15px;
+  font-size: 20px;
+  padding: 10px;
+  border: 0;
+  color: #fff;
+  text-align: center;
+  background: powderblue;
+  cursor: pointer;
+  border: 1px solid #c54987;
+  &:hover {
+    font-size: 24px;
+    background: #2bbc73;
+    border: 1px solid #2bbc73;
+    color: #fff;
+  }
+  -moz-animation: shakeme 3s infinite;
+  -o-animation: shakeme 3s infinite;    
+  -webkit-animation: shakeme 3s infinite;
+  animation: shakeme 3s infinite;
+}
+
+@keyframes shakeme {
+  0% {
+    .scale(1);
+  }
+  5% {
+    .scale(0.7);
+  }
+  10% {
+    .scale(1.5);
+  }
+  15% {
+    .scale(1.1);
+  }
+  20% {
+    .scale(1.4);
+  }
+  30% {
+    .scale(1.1);
+  }
+}
+
+/* mixins */
+
+.border-radius (@radius: 5px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+.animate() {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+.radial-gradient(@from, @to) {
+	background: -moz-radial-gradient(center, circle cover, @from 0%, @to 90%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 90%, color-stop(0%, @from), color-stop(90%, @to));
+	background: -webkit-radial-gradient(center, circle cover, @from 0%, @to 90%);
+	background: -o-radial-gradient(center, circle cover, @from 0%, @to 90%);
+	background: -ms-radial-gradient(center, circle cover, @from 0%, @to 90%);
+	background: radial-gradient(center, circle cover, @from 0%, @to 90%);
+	background-color: @from;
+}
+
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+
+.translate (@x, @y:0) {
+	-webkit-transform:       translate(@x, @y);
+	-moz-transform: 	 translate(@x, @y);
+	-ms-transform: 		 translate(@x, @y);
+	-o-transform: 		 translate(@x, @y);
+}
+
+.scale (@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: 	 scale(@factor);
+	-ms-transform: 		 scale(@factor);
+	-o-transform: 		 scale(@factor);
+}
+
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2:700|Open+Sans:300');
+
 <style id='page-skin-1' type='text/css'>
 .adsbox{padding:2em;box-shadow:0 5px 15px rgba(0,0,0,.16);border-radius:5px;margin-top:2em;background:#fff;text-align:left}
 </style>
