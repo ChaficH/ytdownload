@@ -130,29 +130,6 @@ color:#1a1a1a;
  color: #c2c2c2;
 }
 
-.myButton {
-	background-color:#7892c2;
-	border-radius:28px;
-	border:1px solid #4e6096;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #283966;
-}
-.myButton:hover {
-	background-color:#476e9e;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-        
-
 <style id='page-skin-1' type='text/css'>
 .adsbox{padding:2em;box-shadow:0 5px 15px rgba(0,0,0,.16);border-radius:5px;margin-top:2em;background:#fff;text-align:left}
 </style>
